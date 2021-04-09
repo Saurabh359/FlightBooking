@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "trile-project": {
+      "hosting": {
+        "FlyTech": [
+          "trile-project"
+        ]
+      }
+    }
+  }
+}

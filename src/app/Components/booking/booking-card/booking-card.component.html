@@ -1,0 +1,66 @@
+<div class="body">
+    <div class="booking-card">
+        <form (ngSubmit)="onSubmit()" [formGroup]="bookingForm" >
+            <div class="Input-group">
+                <fieldset class="input-container">
+                    <legend>From</legend>
+                    <input class="input-box" type="text" formControlName="starting" name="starting" placeholder="Choose your Departure Point">
+                </fieldset>
+            </div>
+            <div class="Input-group">
+                <fieldset class="input-container">
+                    <legend>Destination</legend>
+                    <input class="input-box" type="text" formControlName="destination" name="destination" placeholder="Choose Your Destination">
+                </fieldset>
+            </div>
+            <div class="Input-group2">
+                <label>
+                    <input type="radio" formControlName="triptype" value="one-way"> One-Way
+                </label>
+                <label>
+                    <input type="radio" formControlName="triptype" value="round-trip"> Round-Trip 
+                </label>
+            </div>
+            <div class="Input-group">
+                <fieldset class="input-container">
+                    <legend>Departure Date</legend>
+                    <input class="input-box" type="date" formControlName="departureDate" [min]="startDate" >
+                </fieldset>
+                <fieldset class="input-container">
+                    <legend>Returning Date</legend>
+                    <input class="input-box" type="date" formControlName="returningDate" [min]="f.departureDate.value">
+                </fieldset>
+            </div>
+            <div class="Input-group">
+                <fieldset>
+                    <legend>Passengers & class</legend>
+                    <input class="input-box popup" type="button" [value]="pncdata" >
+                    <div class="input-box2">
+                        <div class="passenger-box">
+                            <div class="single">
+                                <fieldset class="input-container">
+                                    <legend>Passengers</legend>
+                                    <input type="number" class="input-box" min=1 max=9 formControlName="passengers">
+                                </fieldset>
+                            </div>
+                            <div class="single">
+                                <fieldset class="input-container">
+                                    <legend>Class</legend>
+                                    <select name="class" class="input-box" formControlName="class" >
+                                        <option value="Economy">Economy</option>
+                                        <option value="Buisness">Buisness</option>
+                                        <option value="First">First</option>
+                                        <option value="Premium Economy">Premium Economy</option>
+                                    </select>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="Control-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>

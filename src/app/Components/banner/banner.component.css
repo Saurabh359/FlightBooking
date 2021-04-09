@@ -1,0 +1,30 @@
+.banner{
+    padding: 20px 40px;
+    margin: 0;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190828/pngtree-blue-and-pink-smoke-background-png-and-psd-download-image_308386.jpg);
+    animation: mymove 40s infinite;
+}
+.box{
+    display: inline-block;
+    border-radius: 4px;
+    z-index: 1;
+    box-shadow: 0 0 3px 1px;
+}
+.box-comp{
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+
+@keyframes mymove {
+    0%{background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190828/pngtree-blue-and-pink-smoke-background-png-and-psd-download-image_308386.jpg)}
+    35%{background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Monochrome-Type-Simple-Background-Image.jpg)}
+    70%{background-image: url(https://img.happyeasygo.com/oss/ossuploadfile/webmodle/0eded3b89eb4412f93dab20ec3690f91.png?x-oss-process=image/quality,q_85/format,jpg)}
+    100%{background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190828/pngtree-blue-and-pink-smoke-background-png-and-psd-download-image_308386.jpg)}
+  }
+
+@media screen and (max-width: 720px){
+    .box-comp{
+        margin: auto auto;
+    }
+}

@@ -1,0 +1,33 @@
+.card-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card{
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 2px;
+    padding: 10px 20px;
+    margin: 10px 20px;
+}
+
+.card-img{
+    padding: 5px 10px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+}
+.body{
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 720px){
+    .body{
+        overflow-x: scroll;
+    }
+}

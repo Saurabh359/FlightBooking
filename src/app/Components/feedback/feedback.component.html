@@ -1,0 +1,44 @@
+<div class="body">
+    <div class="card-grp">
+        <div class="card" *ngFor="let card of bestFeedback">
+           {{card}}
+        </div>
+    </div>
+    <div class="feedback-form">       
+        <div class="rating-grp" #rating>
+            <i class="fa fa-star fa-3x" (click)="glow=1" (mouseover)="rateIn(1)" (mouseout)="rateOut()"></i>
+            <i class="fa fa-star fa-3x" (click)="glow=2" (mouseover)="rateIn(2)" (mouseout)="rateOut()"></i>
+            <i class="fa fa-star fa-3x" (click)="glow=3" (mouseover)="rateIn(3)" (mouseout)="rateOut()"></i>
+            <i class="fa fa-star fa-3x" (click)="glow=4" (mouseover)="rateIn(4)" (mouseout)="rateOut()"></i>
+            <i class="fa fa-star fa-3x" (click)="glow=5" (mouseover)="rateIn(5)" (mouseout)="rateOut()"></i>
+        </div>
+        <div class="input-grp">
+            <p>Comment : </p>
+            <textarea name="feed" id="feed" placeholder="Describe your experience (optional)"></textarea>
+        </div>
+        <div class="input-grp">
+            <input type="button" class="post" value="Post">
+        </div>
+    </div>
+    <div class="comment-grp">
+        <div class="comment-box" *ngFor="let feed of feedbacks">
+            <div class="image">
+                <img [src]="feed.image" alt="none" >
+            </div>
+            <div class="box-body">
+                <p><u>{{feed.name}}</u></p>
+                <p>{{feed.feed}}</p>
+            </div>
+            <div class="side-info">
+                <p>{{feed.date | date:'medium'}}</p>              
+                <div class=" rating-grp user-rating">
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

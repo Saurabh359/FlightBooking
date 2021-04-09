@@ -1,0 +1,17 @@
+<div class="body" #body>
+    <div class="card-container" *ngFor="let a of travelbloglist">
+        <div class="card">
+            <div class="card-img">
+                <img [src]="a.image" alt="120 * 120" height="120px" width="200px">
+            </div>
+            <div class="card-body">
+                <div class="card-title">
+                    {{a.name}}
+                </div>
+                <div class="card-data">
+                    {{a.detail}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.body{
+    text-align: center;
+}
+h1{
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.video{
+    height: 70vh;
+}
+.video img{
+    position: absolute;
+    left : 0;
+    height: 70vh;
+    width: 98vw;
+}
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    z-index: 3;
+    font-size: 3rem;
+    font-style: oblique;
+    color: #ffffff;
+}
+

@@ -1,0 +1,17 @@
+<div class="body" #body>
+    <div class="card-container">
+        <div class="card"  *ngFor="let a of offerslist">
+            <div class="card-img">
+                <img [src]="a.image" alt="" height="100px">
+            </div>
+            <div class="card-body">
+                <div class="card-title">
+                    {{a.name}}
+                </div>
+                <div class="card-data">
+                    {{a.detail}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

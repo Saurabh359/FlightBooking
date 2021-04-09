@@ -1,0 +1,48 @@
+.comps{
+    margin: 3vh 10vw;
+    box-shadow: 0 0 1px 0;
+    padding: 10px 20px;
+    background-color: white;
+    z-index: 1;
+    border-radius: 5px;
+}
+.comps2{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.comps > *{
+    margin: 5px 20px;
+}
+
+.comps > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comps > div div button{
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    border-top:  #a9a9a9;
+    border-bottom:  #a9a9a9;
+}
+
+#ba{
+    border-left: #a9a9a9;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+#bb{
+    border-right: #a9a9a9;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+@media screen and (max-width: 720px){
+    #ba, #bb{
+        display: none;
+    }
+}
